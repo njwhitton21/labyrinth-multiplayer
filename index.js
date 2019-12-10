@@ -6,7 +6,7 @@ var players = [];
 var playerCount = 0;
 
 server.listen(PORT, function() {
-    console.log("Server is now running on Port: " + PORT + "/3000")
+    console.log("Server is now running... ")
 });
 
 io.on('connection', function(socket){
@@ -22,7 +22,14 @@ io.on('connection', function(socket){
     });
     socket.on('updateBoardState', function(data) {
         io.emit('updateBoardState', data)
-    })
+    });
+    socket.on('updatePlayerTurn', function(data) {
+        for(var i = 0; i < players.length; i++) {
+            players[i].turn = data[i].turn
+        }
+
+        io.emit('updateTurns', players);
+    }); 
     console.log("Player Connected");
     socket.on('disconnect', function(){
 
