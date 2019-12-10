@@ -6,7 +6,7 @@ var players = [];
 var playerCount = 0;
 
 server.listen(PORT, function() {
-    console.log("Server is now running on Port: " + PORT/3000)
+    console.log("Server is now running on Port: " + PORT + "/3000")
 });
 
 io.on('connection', function(socket){
