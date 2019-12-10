@@ -1,0 +1,8 @@
+{
+    "name": "Labyrinth",
+    "description": "Labyrinth the game",
+    "repository": "https://github.com/szmurlh/CS-370--Labyrinth.git",
+    "logo": "",
+    "keywords": ["node", "express", "static"],
+    "image": ""
+}
