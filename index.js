@@ -1,11 +1,12 @@
 var app = require('express')();
 var server = require('http').Server(app);
 var io = require('socket.io')(server);
+const PORT = process.env.PORT || 3000;
 var players = [];
 var playerCount = 0;
 
-server.listen(5000, function() {
-    console.log("Server is now running...")
+server.listen(PORT, function() {
+    console.log("Server is now running on Port: " + PORT/3000)
 });
 
 io.on('connection', function(socket){
