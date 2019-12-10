@@ -4,7 +4,7 @@ var io = require('socket.io')(server);
 var players = [];
 var playerCount = 0;
 
-server.listen(8080, function() {
+server.listen(5000, function() {
     console.log("Server is now running...")
 });
 
